@@ -22,7 +22,7 @@ class Product_model extends CI_Model{
 	public function product_recommended_images(){
 		$this->db->select('');
 		$this->db->from('product');
-	//	$this->db->order_by('rand()');
+	////	$this->db->order_by('rand()');
 		$this->db->limit(3);
 		$query=$this->db->get();
 		return $query->result_array();
