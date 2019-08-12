@@ -22,7 +22,7 @@ class Product_model extends CI_Model{
 	public function product_recommended_images(){
 		$this->db->select('');
 		$this->db->from('product');
-	////	$this->db->order_by('rand()');
+		$this->db->order_by('rand()');
 		$this->db->limit(3);
 		$query=$this->db->get();
 		return $query->result_array();
@@ -37,5 +37,56 @@ class Product_model extends CI_Model{
 		return $query->result_array();
 	}
 
+	
+	
+	public function product_featured_images_nuts(){
+		$this->db->select('');
+		$this->db->from('product');
+		$this->db->where('category','7');
+		$this->db->order_by('rand()');
+		$this->db->limit(3);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+	
+	public function product_featured_images_oil(){
+		$this->db->select('');
+		$this->db->from('product');
+		$this->db->where('category','8');
+		$this->db->order_by('rand()');
+		$this->db->limit(3);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+	
+	public function product_featured_images_Packagedfood(){
+		$this->db->select('');
+		$this->db->from('product');
+		$this->db->where('category','1');
+		$this->db->order_by('rand()');
+		$this->db->limit(3);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+	
+	public function special_products(){
+		$this->db->select('');
+		$this->db->from('special_product');
+		$this->db->order_by('rand()');
+		$this->db->limit(5);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+	
+	
+	public function special_offer(){
+		$this->db->select('');
+		$this->db->from('product');
+		$this->db->where('category','7');
+		$this->db->order_by('rand()');
+		$this->db->limit(5);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
 	
 }
