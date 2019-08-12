@@ -74,7 +74,7 @@
               </div>
 			</li> -->
 			<li class="nav-item"><a href="#" class="nav-link">Groceries</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+	          <li class="nav-item"><a href="<?php echo base_url(); ?>about" class="nav-link">About Us</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">Cart</a></li>
 	          <li class="nav-item"><a href="<?php echo base_url(); ?>contact" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
